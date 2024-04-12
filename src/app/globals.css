@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #8a8a8e;
+  --heading-color: #fff;
+  --background-color: #16161d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #8a8a8e;
+    --heading-color: #fff;
+    --background-color: #16161d;
+  }
+}
+
+body {
+  color: var(--text);
+  background: var(--background-color);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .heading {
+    color: var(--heading-color);
+    font-weight: bold;
+    font-size: large;
+  }
+}
+.flowbite-icon {
+  color: blue; /* Change the color to blue */
+}
