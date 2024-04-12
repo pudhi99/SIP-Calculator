@@ -2,12 +2,13 @@
 import PageHeading from "@/components/PageHeading";
 import React, { useEffect, useState } from "react";
 import { Label, RangeSlider, TextInput } from "flowbite-react";
-import FormatCurrency from "@/utils/formatCurrency";
+
 import { Chart } from "react-google-charts";
 import { MdOutlineCurrencyRupee, MdOutlinePercent } from "react-icons/md";
 import DataTable from "@/components/DataTable";
 import FormatCurrencyNumber from "@/utils/FormatCurrencyNumber";
 import SipLineGraph from "@/components/SipLineGraph";
+import FormatCurrency from "@/utils/FormatCurrency";
 
 function SipCalculatorComponent() {
   const [monthlyAmount, setMonthlyAmount] = useState(1000);
