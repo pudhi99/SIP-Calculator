@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "flowbite";
 import Script from "next/script";
-import Head from "next/head";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // import NavbarComponent from "@/components/NavbarComponent";
 // import SidebarComponent from "@/components/SidebarComponent";
 // import { useEffect, useState } from "react";
@@ -89,6 +89,7 @@ export default function RootLayout({ children }) {
             <div className="flex-1">{children}</div>
           </div> */}
         </div>
+        <SpeedInsights />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PD252XPF"
