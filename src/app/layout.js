@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "flowbite";
+import Script from "next/script";
 // import NavbarComponent from "@/components/NavbarComponent";
 // import SidebarComponent from "@/components/SidebarComponent";
 // import { useEffect, useState } from "react";
@@ -40,6 +41,19 @@ export default function RootLayout({ children }) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4777990936225991"
           crossorigin="anonymous"
         ></script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-NRVXF4XMS6"
+        />
+
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-NRVXF4XMS6');
+          `}
+        </Script>
       </head>
       <body className="">
         <div className="h-screen overflow-y-auto">
