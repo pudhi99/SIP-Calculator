@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "flowbite";
 import Script from "next/script";
+import Head from "next/head";
 // import NavbarComponent from "@/components/NavbarComponent";
 // import SidebarComponent from "@/components/SidebarComponent";
 // import { useEffect, useState } from "react";
@@ -36,17 +37,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
-          async
+        <Script
+          strategy="lazyOnload"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4777990936225991"
           crossorigin="anonymous"
-        ></script>
+        />
+        <Script />
+
         <Script
-          async
+          id="google-analytics"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-NRVXF4XMS6"
         />
 
-        <Script id="google-analytics">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -54,7 +58,23 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-NRVXF4XMS6');
           `}
         </Script>
+
+        {/* Google Tag Manager Script */}
+        <Script id="google-tag-manager">
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PD252XPF');
+          `}
+        </Script>
       </head>
+
       <body className="">
         <div className="h-screen overflow-y-auto">
           {children}
@@ -69,6 +89,14 @@ export default function RootLayout({ children }) {
             <div className="flex-1">{children}</div>
           </div> */}
         </div>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PD252XPF"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
       </body>
     </html>
   );

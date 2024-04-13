@@ -48,7 +48,7 @@ const DataTable = ({ columns, data }) => {
   const displayedPages = getPageRange(pageCount, pageIndex);
 
   return (
-    <div className="bg-gray-800 text-white rounded-lg shadow-lg overflow-x-auto mx-5 my-5">
+    <div className="bg-gray-800 text-white rounded-lg shadow-lg overflow-x-auto mx-2 sm:mx-5 my-5">
       <table className="min-w-full leading-normal" {...getTableProps()}>
         {/* Table Header */}
         <thead>

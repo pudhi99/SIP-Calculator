@@ -2,7 +2,7 @@ import React from "react";
 
 function SipCalculationText() {
   return (
-    <div className="mx-5">
+    <div className="mx-2 sm:mx-5">
       <h1 className="text-2xl text-gray-400 text-center my-5">
         SIP Calculator – Systematic Investment Plan Calculator
       </h1>

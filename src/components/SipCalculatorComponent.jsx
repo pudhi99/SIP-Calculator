@@ -111,7 +111,7 @@ function SipCalculatorComponent() {
   return (
     <div>
       <PageHeading>SIP Calculator</PageHeading>
-      <div className="grid grid-cols-7 gap-4  sm:mx-5">
+      <div className="grid grid-cols-7 gap-4 mx-2 sm:mx-5">
         <div className="col-span-full lg:col-span-4 border-2 border-gray-600 rounded-md p-5">
           <div className="flex justify-between items-center mt-5">
             <p className="">Monthly investment</p>
