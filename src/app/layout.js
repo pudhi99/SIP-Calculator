@@ -37,12 +37,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script
-          strategy="lazyOnload"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4777990936225991"
+      <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_ID}`}
           crossorigin="anonymous"
         />
-        <Script />
 
         <Script
           id="google-analytics"
@@ -74,8 +73,6 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4777990936225991"
-     crossorigin="anonymous"></Script>
       </head>
 
       <body className="">
