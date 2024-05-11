@@ -73,6 +73,9 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-PD252XPF');
           `}
         </Script>
+
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4777990936225991"
+     crossorigin="anonymous"></Script>
       </head>
 
       <body className="">
